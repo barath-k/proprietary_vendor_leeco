@@ -853,7 +853,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     com.qualcomm.location \
-	vendor.display.color@1.0 \
+    vendor.display.color@1.0 \
     libloc_api_v02 \
     libtfa9890 \
     libthermalclient \
@@ -862,8 +862,8 @@ PRODUCT_PACKAGES += \
     ims \
     imssettings \
     uceShimService \
-	dpmserviceapp \
-	QtiTelephonyServicelibrary \
+    dpmserviceapp \
+    QtiTelephonyServicelibrary \
     TimeService \
     CNEService \
     qcrilmsgtunnel \
