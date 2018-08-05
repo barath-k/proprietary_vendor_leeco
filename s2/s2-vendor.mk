@@ -184,6 +184,7 @@ PRODUCT_COPY_FILES += \
     vendor/leeco/s2/proprietary/vendor/bin/sensors.qcom:system/vendor/bin/sensors.qcom \
     vendor/leeco/s2/proprietary/vendor/bin/tftp_server:system/vendor/bin/tftp_server \
     vendor/leeco/s2/proprietary/vendor/bin/thermal-engine:system/vendor/bin/thermal-engine \
+    vendor/leeco/s2/proprietary/vendor/bin/time_daemon:system/vendor/bin/time_daemon \
     vendor/leeco/s2/proprietary/vendor/etc/sensors/hals.conf:system/vendor/etc/sensors/hals.conf \
     vendor/leeco/s2/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
     vendor/leeco/s2/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:system/vendor/lib/egl/eglSubDriverAndroid.so \
@@ -225,6 +226,7 @@ PRODUCT_COPY_FILES += \
     vendor/leeco/s2/proprietary/vendor/lib/libSecureSampleAuthJNI.so:system/vendor/lib/libSecureSampleAuthJNI.so \
     vendor/leeco/s2/proprietary/vendor/lib/libSecureUILib.so:system/vendor/lib/libSecureUILib.so \
     vendor/leeco/s2/proprietary/vendor/lib/libStDrvInt.so:system/vendor/lib/libStDrvInt.so \
+    vendor/leeco/s2/proprietary/vendor/lib/libTimeService.so:system/vendor/lib/libTimeService.so \
     vendor/leeco/s2/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     vendor/leeco/s2/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so \
     vendor/leeco/s2/proprietary/vendor/lib/libacdb-fts.so:system/vendor/lib/libacdb-fts.so \
@@ -555,6 +557,7 @@ PRODUCT_COPY_FILES += \
     vendor/leeco/s2/proprietary/vendor/lib64/libSecureSampleAuthJNI.so:system/vendor/lib64/libSecureSampleAuthJNI.so \
     vendor/leeco/s2/proprietary/vendor/lib64/libSecureUILib.so:system/vendor/lib64/libSecureUILib.so \
     vendor/leeco/s2/proprietary/vendor/lib64/libStDrvInt.so:system/vendor/lib64/libStDrvInt.so \
+    vendor/leeco/s2/proprietary/vendor/lib64/libTimeService.so:system/vendor/lib64/libTimeService.so \
     vendor/leeco/s2/proprietary/vendor/lib64/libacdb-fts.so:system/vendor/lib64/libacdb-fts.so \
     vendor/leeco/s2/proprietary/vendor/lib64/libacdbloader.so:system/vendor/lib64/libacdbloader.so \
     vendor/leeco/s2/proprietary/vendor/lib64/libacdbmapper.so:system/vendor/lib64/libacdbmapper.so \
@@ -840,20 +843,17 @@ PRODUCT_COPY_FILES += \
     vendor/leeco/s2/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:system/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
     vendor/leeco/s2/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:system/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
     vendor/leeco/s2/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
-    vendor/leeco/s2/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
-    vendor/leeco/s2/proprietary/lib/libqvr_adsp_driver_stub.so:system/lib/libqvr_adsp_driver_stub.so \
-    vendor/leeco/s2/proprietary/vendor/lib/libadsp_default_listener.so:system/vendor/lib/libadsp_default_listener.so \
-    vendor/leeco/s2/proprietary/vendor/lib64/libadsp_default_listener.so:system/vendor/lib64/libadsp_default_listener.so \
-    vendor/leeco/s2/proprietary/lib/rfsa/adsp/libqvr_adsp_driver_skel.so:system/lib/rfsa/adsp/libqvr_adsp_driver_skel.so \
-    vendor/leeco/s2/proprietary/vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so:system/vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so \
-    vendor/leeco/s2/proprietary/vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so:system/vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so \
-    vendor/leeco/s2/proprietary/vendor/lib/rfsa/adsp/libadsp_fd_skel.so:system/vendor/lib/rfsa/adsp/libadsp_fd_skel.so \
-    vendor/leeco/s2/proprietary/vendor/lib/rfsa/adsp/libexternal_dog_skel.so:system/vendor/lib/rfsa/adsp/libexternal_dog_skel.so
+    vendor/leeco/s2/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar
 
+
+
+
+
+	
 
 PRODUCT_PACKAGES += \
     com.qualcomm.location \
-    vendor.display.color@1.0 \
+	vendor.display.color@1.0 \
     libloc_api_v02 \
     libtfa9890 \
     libthermalclient \
@@ -862,8 +862,9 @@ PRODUCT_PACKAGES += \
     ims \
     imssettings \
     uceShimService \
-    dpmserviceapp \
-    QtiTelephonyServicelibrary \
+	dpmserviceapp \
+	QtiTelephonyServicelibrary \
+    TimeService \
     CNEService \
     qcrilmsgtunnel \
     qcrilhook \
