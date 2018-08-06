@@ -52,27 +52,25 @@ LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libimscamera_jni
+LOCAL_MODULE := dpmserviceapp
 LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libimscamera_jni.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libimscamera_jni.so
-LOCAL_MULTILIB := both
+LOCAL_SRC_FILES := proprietary/priv-app/dpmserviceapp/dpmserviceapp.apk
+LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_VENDOR_MODULE := true
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libimsmedia_jni
+LOCAL_MODULE := QtiTelephonyServicelibrary
 LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libimsmedia_jni.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libimsmedia_jni.so
-LOCAL_MULTILIB := both
+LOCAL_SRC_FILES := proprietary/framework/QtiTelephonyServicelibrary.jar
+LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_VENDOR_MODULE := true
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -111,17 +109,6 @@ LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := fastdormancy
-LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/app/fastdormancy/fastdormancy.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := CNEService
 LOCAL_MODULE_OWNER := leeco
 LOCAL_SRC_FILES := proprietary/priv-app/CNEService/CNEService.apk
@@ -132,7 +119,6 @@ LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
-
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := qcrilmsgtunnel
@@ -149,7 +135,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := ims
 LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/vendor/app/ims/ims.apk
+LOCAL_SRC_FILES := proprietary/app/ims/ims.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
@@ -161,7 +147,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := imssettings
 LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/vendor/app/imssettings/imssettings.apk
+LOCAL_SRC_FILES := proprietary/app/imssettings/imssettings.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
@@ -171,59 +157,9 @@ LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := cneapiclient
-LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/framework/cneapiclient.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := com.quicinc.cne
-LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/framework/com.quicinc.cne.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := imscmlibrary
-LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/framework/imscmlibrary.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := qcnvitems
-LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/framework/qcnvitems.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := qcrilhook
 LOCAL_MODULE_OWNER := leeco
 LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := rcsimssettings
-LOCAL_MODULE_OWNER := leeco
-LOCAL_SRC_FILES := proprietary/framework/rcsimssettings.jar
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
